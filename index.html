@@ -403,23 +403,22 @@
         </div>
         <div class="footer-subscription">
           <h2 class="footer-title">Подпишитесь на рассылку</h2>
-          <div class="footer-mail-wrap">
-            <form action="#" class="footer-mail-form">
-              <input 
+          <form action="#" class="footer-mail-form">
+            <lable for="user-mail" class="footer-mail">
+            <input 
               type="mail" 
               class="footer-mail-input" 
+              id="user-mail"
               name="mail" 
               placeholder="E-mail"
-              />
-              <button type="submit" class="btn-subscribe">
-                Подписаться
-                <svg class="icon-send-footer" width=24 height=24>
-                  <use href=./images/icon/icon.svg#icon-check></use>
-                </svg>
-              </button>
-            </form>
-          </div>
-             
+            />
+            <button type="submit" class="btn-subscribe">
+              Подписаться
+              <svg class="icon-send-footer" width=24 height=24>
+                <use href=./images/icon/icon.svg#icon-send></use>
+              </svg>
+            </button>
+          </form>
         </div>
       </div>
     </footer>
@@ -475,10 +474,10 @@
           <div class="modal-field">
             <label for="user-mail" class="form-input-text">Комментарий</label>
             <textarea 
-            name="" 
-            id="" 
-            class="modal-form-text"
-            placeholder="Введите текст"
+              name="" 
+              id="" 
+              class="modal-form-text"
+              placeholder="Введите текст"
             ></textarea>
           </div>
           <div class="modal-field-check">
@@ -494,12 +493,7 @@
               Соглашаюсь с рассылкой и принимаю Условия договора
             </label>
           </div>
-
           <button type="submit" class="modal-btn">Отправить</button>
-          <!-- <div class="modal-field">
-            <label class="form-input-text" for="user-name"
-            >
-          </div> -->
         </form>
       </div>
     </div>
