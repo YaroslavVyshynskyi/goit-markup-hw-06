@@ -695,6 +695,20 @@ address {
   justify-content: center;
 }
 
+/* .modal-close:focus  + .modal-close-icon{
+  fill: tomato; */
+} 
+.modal-close:hover  {
+  background: tomato;
+}
+
+/* + .modal-close-icon */
+
+.modal-close-icon:focus,
+.modal-close-icon:hover {
+  fill: #2196F3;
+}
+
 .is-hidden {
   visibility: hidden;
   opacity: 0;
@@ -711,17 +725,22 @@ address {
   margin-bottom: 12px;
 } 
 
+.modal-form {
+  display: block;
+}
+
 .modal-field {
   margin-bottom: 10px;
-  position: relative;
 }
 
-.input-wrap {
-  
-}
-
-.input-icon {
-  position: absolute; 
+.modal-form-label {
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color:  #757575;
+  margin-bottom: 4px;
 }
 
 .modal-form-input {
@@ -729,70 +748,97 @@ address {
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  padding: 12px;
+  padding: 12px 12px 12px 42px;
+  color: #757575;
+  outline: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-input-text {
-  font-family: inherit;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.16;
-  color:  #757575;
-  margin-bottom: 4px;
+.modal-form-input:focus,
+.modal-form-textarea:focus {
+  border-color: #2196F3;
 }
 
-.modal-form-text {
+.modal-form-input:focus + .input-icon {
+  fill: #2196F3;
+}
+
+.input-wrap {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  display: inline-block;
+  transform: translateY(-50%);
+}
+
+.modal-form-textarea {
   width: 100%;
   height: 120px;
+  resize: none;
+  color: #757575;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  display: block;
-  resize: none;
   padding: 12px 16px;
+  outline: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-form-input::placeholder,
-.modal-form-text::placeholder {
+.modal-form-textarea::placeholder {
   font-weight: normal;
   font-size: 12px;
   line-height: 1.16;
   color: rgba(117, 117, 117, 0.5);
 }
 
-.modal-field-check {
+.modal-check {
+  width: 100%;
+  height: 100%;
   margin-top: 20px;
   margin-bottom: 30px;
 }
 
-.check-text {
-  font-family: inherit;
-  font-weight: 400;
+.check-label {
   font-size: 14px;
   line-height: 1.71;
-  color:  #757575;
+  letter-spacing: 0.03em;
+  color: #757575;
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .check-item {
   width: 16px;
   height: 15px;
-  border: 2px solid #000000;
+  border: 2px solid #212121;
   border-radius: 2px;
+  display: block;
+  margin-right: 8.38px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 8.3px;
 }
 
-.check-icon {
-  fill: #ffffff;
+.check-icon{
+ fill: #FFFFFF;
 }
 
-.modal-check:checked + .check-text .check-item {
+.policy-link {
+  color: #2196F3;
+  margin-left: 3px;
+}
+
+.modal-check-input:checked + .check-label .check-item {
   background-color: #2196F3;
   border: none;
 }
-.modal-btn {
+
+.modal-btn { 
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
@@ -804,14 +850,22 @@ address {
   background: var(--btn-main-color);
   color: var(--btn-text-color);
   box-sizing: border-box;
-  width: 200px;
-  height: 50px;
+  min-width: 200px;
+  min-height: 50px;
   border-radius: 4px;
-  padding: 10px auto;
+  padding: 10px 32px;
   margin: 0 auto;
   display: block;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-}
+  border: none;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+.modal-btn:hover,
+.modal-btn:focus {
+  background-color: #188CE8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+} 
 
 /*---------------------PORTFOLIO---------------------*/
 
@@ -839,7 +893,6 @@ address {
   display: block;
   border: transparent;
   border-radius: 4px;
-  /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); */
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
   background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
   box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
