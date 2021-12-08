@@ -1,2 +1,2 @@
-https://yaroslavvyshynskyi.github.io/goit-markup-hw-05/
+https://yaroslavvyshynskyi.github.io/goit-markup-hw-06/
  
